@@ -103,7 +103,7 @@ void UPTAction_CombatEnemy::Init()
 	UPTConditionalAction_Loop::SetParam(
 		MakeCondition<UPTCondition_ExistTarget>(Target),
 			MakeAction<UPTActionGroup_Sequencial>(
-				std::initializer_list<UPTAction*>{
+				GROUP_LIST{
 					MakeAction<UPTAction_ChaseTarget>(Target),
 					MakeAction<UPTAction_Attack>(Target)
 				}
